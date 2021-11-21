@@ -40,8 +40,8 @@ namespace Mafia
 
         protected override void Initialize()
         {
-            graphics.PreferredBackBufferWidth = 640;
-            graphics.PreferredBackBufferHeight = 480;
+            graphics.PreferredBackBufferWidth = 2 * 640;
+            graphics.PreferredBackBufferHeight = 2 * 480;
             graphics.ApplyChanges();
 
             base.Initialize();

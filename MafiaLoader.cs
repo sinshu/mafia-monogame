@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Mafia
@@ -47,16 +48,11 @@ namespace Mafia
             return Texture2D.FromFile(device, path);
         }
 
-        /*
-        public SecondaryBuffer GetBuffer(Microsoft.DirectX.DirectSound.Device device, string fileName)
+        public SoundEffect GetBuffer(string fileName)
         {
-            BufferDescription bd = new BufferDescription();
-            bd.ControlEffects = false;
-            bd.ControlPan = true;
-            bd.ControlVolume = true;
-            return new SecondaryBuffer(GetFileStream(fileName), bd, device);
+            var path = Path.Combine(GetExeDirectory(), resourceName, fileName);
+            return SoundEffect.FromStream(GetFileStream(path));
         }
-        */
 
         public Stage GetStage(string fileName)
         {

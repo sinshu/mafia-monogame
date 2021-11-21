@@ -1,138 +1,78 @@
 using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Mafia
 {
     public class MafiaSound : IDisposable
     {
-        /*
-        private const int MAX_NUM_CHANNELS = 256;
+        private MafiaApplication app;
 
-        Device device = null;
-        MafiaBufferContainer buffers;
-
-        GameSoundChannel[] channels;
-        int numChannels;
-        */
-
-        int ticks;
+        private MafiaBufferContainer buffers;
 
         public MafiaSound(MafiaApplication app)
         {
-            /*
-            try
-            {
-                device = new Device();
-            }
-            catch
-            {
-                return;
-            }
-            device.SetCooperativeLevel(form, CooperativeLevel.Priority);
-            buffers = new MafiaBufferContainer(device);
+            this.app = app;
 
-            channels = new GameSoundChannel[MAX_NUM_CHANNELS];
-            numChannels = 0;
-
-            ticks = 0;
-            */
+            buffers = new MafiaBufferContainer(app);
         }
 
-        public void Play(SecondaryBuffer buffer, Thing thing)
+        public void Play(SoundEffect buffer, Thing thing)
         {
-            /*
-            if (device == null) return;
-            if (numChannels == MAX_NUM_CHANNELS) return;
-            channels[numChannels] = new GameSoundChannel(buffer.Clone(device), thing);
-            channels[numChannels].Buffer.Pan = CalcPan(thing);
-            channels[numChannels].Buffer.Volume = CalcVolume(thing);
-            channels[numChannels].Buffer.Play(0, BufferPlayFlags.Default);
-            numChannels++;
-            */
+            var sound = buffer.CreateInstance();
+            sound.Pan = CalcPan(thing);
+            if (thing is Lift)
+            {
+                sound.Volume = 0.25F * CalcVolume(thing);
+            }
+            else
+            {
+                sound.Volume = CalcVolume(thing);
+            }
+            sound.Play();
         }
 
         public void PlaySelectSound(SelectScene select)
         {
-            /*
-            if (device == null) return;
             select.PlaySound(this, buffers);
-            */
         }
 
         public void PlayGameSound(GameScene game)
         {
-            /*
-            if (device == null) return;
-
-            ticks++;
-
-            for (int i = 0; i < numChannels; i++)
-            {
-                if (!channels[i].Buffer.Status.Playing)
-                {
-                    channels[i].Buffer.Dispose();
-                    numChannels--;
-                    for (int j = i; j < numChannels; j++)
-                    {
-                        channels[j] = channels[j + 1];
-                    }
-                }
-            }
-
-            if (ticks % 2 == 0)
-            {
-                for (int i = 0; i < numChannels; i++)
-                {
-                    channels[i].Buffer.Pan = CalcPan(channels[i].Thing);
-                    channels[i].Buffer.Volume = CalcVolume(channels[i].Thing);
-                }
-            }
-
             game.ThingList.PlaySound(this, buffers);
-            */
         }
 
         public void StopSounds()
         {
-            /*
-            if (device == null) return;
-            for (int i = 0; i < numChannels; i++)
-            {
-                channels[i].Buffer.Stop();
-                channels[i].Buffer.Dispose();
-            }
-            numChannels = 0;
-            */
         }
 
-        private int CalcPan(Thing thing)
+        private float CalcPan(Thing thing)
         {
-            /*
             if (thing == null)
             {
-                return (int)Pan.Center;
+                return 0;
             }
-            double pan = (thing.CenterOnScreen.X - Mafia.SCREEN_WIDTH / 2) * 10000 / (Mafia.SCREEN_WIDTH * 4);
-            if (Math.Abs(pan) > 10000)
-            {
-                pan = Math.Sign(pan) * 10000;
-            }
-            return (int)Math.Round(pan);
-            */
 
-            return 0;
+            double pan = (thing.CenterOnScreen.X - Mafia.SCREEN_WIDTH / 2) / (Mafia.SCREEN_WIDTH * 4);
+            if (Math.Abs(pan) > 0.999)
+            {
+                pan = Math.Sign(pan) * 0.999;
+            }
+
+            return (float)pan;
         }
 
-        private int CalcVolume(Thing thing)
+        private float CalcVolume(Thing thing)
         {
-            /*
             if (thing == null)
             {
-                return (int)Volume.Max;
+                return 1;
             }
+
             Vector v = thing.CenterOnScreen;
             if (0 < v.X && v.X < Mafia.SCREEN_WIDTH && 0 < v.Y && v.Y < Mafia.SCREEN_HEIGHT)
             {
-                return 0;
+                return 1;
             }
 
             double range1 = -v.X;
@@ -141,14 +81,11 @@ namespace Mafia
             double range4 = v.Y - Mafia.SCREEN_HEIGHT;
             double range = Math.Max(Math.Max(range1, range2), Math.Max(range3, range4));
 
-            int volume = (int)Math.Round(-range * 10000 / Mafia.SOUND_RANGE);
-            if (volume < -10000) volume = -10000;
-            if (volume > 0) volume = 0;
+            double volume = 1.0 - (range / Mafia.SOUND_RANGE);
+            if (volume < 0) volume = 0;
+            if (volume > 1) volume = 1;
 
-            return volume;
-            */
-
-            return 0;
+            return (float)volume;
         }
 
         public void Dispose()
