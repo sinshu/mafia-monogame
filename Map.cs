@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// マリオ風アクションゲームによく見られる格子状のマップを表す。
-    /// </summary>
     public class Map
     {
         public const int NONE = 0;

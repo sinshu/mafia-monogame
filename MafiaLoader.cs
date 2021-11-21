@@ -6,9 +6,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Mafia
 {
-    /// <summary>
-    /// リソースをStreamを介して読み込む。
-    /// </summary>
     public class MafiaLoader
     {
         private static MafiaLoader defaultLoader;
@@ -63,35 +60,36 @@ namespace Mafia
 
         public Stage GetStage(string fileName)
         {
-            Stream stream = GetFileStream(fileName);
-            StreamReader reader = new StreamReader(stream);
-            string title = null;
-            int numRows = 0;
-            int numCols = 0;
-            try
+            using (Stream stream = GetFileStream(fileName))
+            using (StreamReader reader = new StreamReader(stream))
             {
-                title = reader.ReadLine();
-                numRows = int.Parse(reader.ReadLine());
-                numCols = int.Parse(reader.ReadLine());
+                string title = null;
+                int numRows = 0;
+                int numCols = 0;
+
+                try
+                {
+                    title = reader.ReadLine();
+                    numRows = int.Parse(reader.ReadLine());
+                    numCols = int.Parse(reader.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    throw new Exception("Faild to parse the stage file: " + fileName);
+                }
+                catch (OverflowException)
+                {
+                    throw new Exception("The stage is too large: " + fileName);
+                }
+
+                string[] source = new string[numRows];
+                for (int row = 0; row < numRows; row++)
+                {
+                    source[row] = reader.ReadLine();
+                }
+
+                return new Stage(fileName, title, numRows, numCols, source);
             }
-            catch (FormatException)
-            {
-                throw new Exception(fileName + " の書式に致命的なミスがあるっぽいです＞＜");
-            }
-            catch (OverflowException)
-            {
-                throw new Exception(fileName + " で何か途方もなく巨大な面を作ろうとしてませんか＞＜");
-            }
-            string[] source = new string[numRows];
-            for (int row = 0; row < numRows; row++)
-            {
-                source[row] = reader.ReadLine();
-            }
-            reader.Close();
-            reader.Dispose();
-            stream.Close();
-            stream.Dispose();
-            return new Stage(fileName, title, numRows, numCols, source);
         }
 
         private static string GetExeDirectory()

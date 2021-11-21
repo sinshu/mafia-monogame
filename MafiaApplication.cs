@@ -5,9 +5,6 @@ using Microsoft.Xna.Framework;
 
 namespace Mafia
 {
-    /// <summary>
-    /// メインループとか。
-    /// </summary>
     public class MafiaApplication : Game
     {
         public const int TITLE_SCENE = 1;
@@ -114,7 +111,6 @@ namespace Mafia
             {
                 case TITLE_SCENE:
                     {
-                        // イェンドウ、nullかどうかチェックしなきゃならんとは何事か
                         //if (bgm != null && bgm.Playing)
                         //{
                         //    bgm.Stop();

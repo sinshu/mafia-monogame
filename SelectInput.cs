@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// セレクト画面中の操作。
-    /// </summary>
     public struct SelectInput
     {
         public static SelectInput Empty = new SelectInput(false, false, false, false, false, false);

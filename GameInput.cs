@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// ƒQ[ƒ€’†‚Ì‘€ìB
-    /// </summary>
     public struct GameInput
     {
         public static GameInput Empty = new GameInput(false, false, false, false, false, false);

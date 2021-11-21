@@ -3,9 +3,6 @@ using Microsoft.Xna.Framework;
 
 namespace Mafia
 {
-    /// <summary>
-    /// ゲーム云々。
-    /// </summary>
     public class GameScene
     {
         public const int NONE = 0;

@@ -2,12 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// 格子状に配置されたブロックの一つの位置を指す。
-    /// </summary>
-    /// <remarks>
-    /// 微妙に的外れなネーミングだが気にするな。
-    /// </remarks>
     public struct Dim
     {
         public int Row;

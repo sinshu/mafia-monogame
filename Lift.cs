@@ -2,9 +2,6 @@
 
 namespace Mafia
 {
-    /// <summary>
-    /// リフト。
-    /// </summary>
     public class Lift : Thing
     {
         private static int WIDTH = 32;

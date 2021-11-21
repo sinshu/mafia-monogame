@@ -2,12 +2,9 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// ’è”‚Í‚±‚ÌƒNƒ‰ƒX‚É‚Ü‚Æ‚ß‚éB
-    /// </summary>
     public static class Mafia
     {
-        public const string TITLE = "‚Ü‚Ó‚¡‚ ";
+        public const string TITLE = "Mafia";
         public const string RESOURCE_NAME = "mafia";
         public const int SCREEN_WIDTH = 320;
         public const int SCREEN_HEIGHT = 240;

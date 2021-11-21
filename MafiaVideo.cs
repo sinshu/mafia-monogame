@@ -5,36 +5,58 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Mafia
 {
-    /// <summary>
-    /// 画面表示の云々を扱う。
-    /// </summary>
-    /// <remarks>
-    /// フルスクリーン時にAlt+Tabを押しても無問題。
-    /// SpriteをDeviceLost時にDisposeするとDeviceReset時にエラーが発生する。
-    /// でも再生成しなくてもちゃんと動いてるっぽいので放置。
-    /// </remarks>
     public class MafiaVideo : IDisposable
     {
         private MafiaApplication app;
 
         private SpriteBatch sprite;
         private Texture2D texture;
+        private RenderTarget2D renderTarget;
 
         public MafiaVideo(MafiaApplication app)
         {
             this.app = app;
 
             sprite = new SpriteBatch(app.Graphics.GraphicsDevice);
-            texture = MafiaLoader.DefaultLoader.GetTexture(app.Graphics.GraphicsDevice, "mafia.bmp");
+            texture = MafiaLoader.DefaultLoader.GetTexture(app.Graphics.GraphicsDevice, "mafia.png");
+            renderTarget = new RenderTarget2D(app.Graphics.GraphicsDevice, Mafia.SCREEN_WIDTH, Mafia.SCREEN_HEIGHT);
         }
 
         public void Begin()
         {
-            sprite.Begin();
+            app.Graphics.GraphicsDevice.SetRenderTarget(renderTarget);
+
+            sprite.Begin(SpriteSortMode.Immediate,
+                BlendState.AlphaBlend,
+                SamplerState.PointClamp,
+                null,
+                null,
+                null,
+                Matrix.Identity);
         }
 
         public void End()
         {
+            sprite.End();
+
+            app.Graphics.GraphicsDevice.SetRenderTarget(null);
+
+            sprite.Begin(SpriteSortMode.Immediate,
+                BlendState.Opaque,
+                SamplerState.PointClamp,
+                null,
+                null,
+                null,
+                Matrix.Identity);
+
+            var windowWidth = app.GraphicsDevice.PresentationParameters.BackBufferWidth;
+            var windowHeight = app.GraphicsDevice.PresentationParameters.BackBufferHeight;
+
+            sprite.Draw(
+                renderTarget,
+                new Rectangle(0, 0, windowWidth, windowHeight),
+                Color.White);
+
             sprite.End();
         }
 
@@ -439,6 +461,12 @@ namespace Mafia
 
         public void Dispose()
         {
+            if (renderTarget != null)
+            {
+                renderTarget.Dispose();
+                renderTarget = null;
+            }
+
             if (texture != null)
             {
                 texture.Dispose();

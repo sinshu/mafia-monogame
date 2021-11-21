@@ -1,30 +1,27 @@
 using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace Mafia
 {
-    /// <summary>
-    /// プレイヤーからの入力をうねうねする。
-    /// </summary>
     public class MafiaInput : IDisposable
     {
-        MafiaApplication app;
+        private MafiaApplication app;
+
+        private KeyboardState keyboardState;
 
         private bool left;
         private bool up;
         private bool right;
         private bool down;
-        private bool enter;
         private bool space;
-        private bool alt;
         private bool esc;
 
         private bool prevLeft;
         private bool prevUp;
         private bool prevRight;
         private bool prevDown;
-        private bool prevEnter;
         private bool prevSpace;
-        private bool prevAlt;
         private bool prevEsc;
 
         public MafiaInput(MafiaApplication app)
@@ -32,50 +29,29 @@ namespace Mafia
             this.app = app;
 
             prevLeft = prevUp = prevRight = prevDown = false;
-            prevEnter = prevSpace = false;
-            prevAlt = false;
+            prevSpace = false;
             prevEsc = false;
         }
 
         public TitleInput GetCurrentTitleInput()
         {
-            /*
-            if (form.Focused)
-            {
-                UpdateKeys();
-                return new TitleInput(up, down, space && !prevSpace, esc && !prevEsc);
-            }
-            */
-            return TitleInput.Empty;
+            UpdateKeys();
+
+            return new TitleInput(up, down, space && !prevSpace, esc && !prevEsc);
         }
 
         public SelectInput GetCurrentSelectInput()
         {
-            /*
-            if (form.Focused)
-            {
-                UpdateKeys();
-                return new SelectInput(left && !prevLeft, up && !prevUp, right && !prevRight, down && !prevDown, space && !prevSpace, esc && !prevEsc);
-            }
-            */
-            return SelectInput.Empty;
+            UpdateKeys();
+
+            return new SelectInput(left && !prevLeft, up && !prevUp, right && !prevRight, down && !prevDown, space && !prevSpace, esc && !prevEsc);
         }
 
         public GameInput GetCurrentGameInput()
         {
-            /*
-            if (form.Focused)
-            {
-                UpdateKeys();
-                return new GameInput(left, up, right, down, space && !prevSpace, esc && !prevEsc);
-            }
-            */
-            return GameInput.Empty;
-        }
+            UpdateKeys();
 
-        public bool ShouldToggleFullscreen()
-        {
-            return alt && enter && !prevEnter;
+            return new GameInput(left, up, right, down, space && !prevSpace, esc && !prevEsc);
         }
 
         public void Dispose()
@@ -84,25 +60,29 @@ namespace Mafia
 
         private void UpdateKeys()
         {
-            /*
+            keyboardState = Keyboard.GetState();
+
             prevLeft = left;
             prevUp = up;
             prevRight = right;
             prevDown = down;
-            prevEnter = enter;
             prevSpace = space;
-            prevAlt = alt;
             prevEsc = esc;
-            KeyboardState state = device.GetCurrentKeyboardState();
-            left = state[Key.Left];
-            up = state[Key.Up] || state[Key.A] || state[Key.S] || state[Key.Z] || state[Key.LeftShift] || state[Key.LeftControl];
-            right = state[Key.Right];
-            down = state[Key.Down];
-            enter = state[Key.Return];
-            space = state[Key.Space];
-            alt = state[Key.LeftAlt] || state[Key.RightAlt];
-            esc = state[Key.Escape];
-            */
+
+            left = keyboardState.IsKeyDown(Keys.Left);
+
+            up = keyboardState.IsKeyDown(Keys.Up) ||
+                 keyboardState.IsKeyDown(Keys.A) ||
+                 keyboardState.IsKeyDown(Keys.S) ||
+                 keyboardState.IsKeyDown(Keys.Z) ||
+                 keyboardState.IsKeyDown(Keys.LeftShift) ||
+                 keyboardState.IsKeyDown(Keys.LeftControl);
+
+            right = keyboardState.IsKeyDown(Keys.Right);
+            down = keyboardState.IsKeyDown(Keys.Down);
+
+            space = keyboardState.IsKeyDown(Keys.Enter) || keyboardState.IsKeyDown(Keys.Space);
+            esc = keyboardState.IsKeyDown(Keys.Escape);
         }
     }
 }

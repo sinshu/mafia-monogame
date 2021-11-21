@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// Ç®ã‡ÅB
-    /// </summary>
     public class Coin : Thing
     {
         private static int WIDTH = 16;

@@ -3,9 +3,6 @@ using Microsoft.Xna.Framework;
 
 namespace Mafia
 {
-    /// <summary>
-    /// ステージセレクト画面。
-    /// </summary>
     public class SelectScene
     {
         public const int NONE = -1;

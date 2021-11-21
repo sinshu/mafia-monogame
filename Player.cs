@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// クラス名を見れば分かると思うがプレイヤー。
-    /// </summary>
     public class Player : Thing
     {
         private const int WIDTH = 16;
@@ -229,7 +226,7 @@ namespace Mafia
             {
                 if (input.GotoSelect) Damaged(null);
 
-                #region 左右の動き
+                #region Horizontal Movement
                 {
                     if (!left && !right || left && right)
                     {
@@ -287,7 +284,7 @@ namespace Mafia
                 }
                 #endregion
 
-                #region ジャンプ＆上下の動き
+                #region Vertical Movement
                 {
                     Velocity.Y += 0.25;
                     if (Velocity.Y > 4)
@@ -355,7 +352,7 @@ namespace Mafia
                     }
                 }
 
-                #region カメラ位置の補正
+                #region Camera position
                 {
                     switch (Direction)
                     {

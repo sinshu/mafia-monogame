@@ -3,9 +3,6 @@ using System.Drawing;
 
 namespace Mafia
 {
-    /// <summary>
-    /// 2次元のベクトルを表す。
-    /// </summary>
     public struct IntVector
     {
         public int X;

@@ -2,9 +2,6 @@ using System;
 
 namespace Mafia
 {
-    /// <summary>
-    /// サウンドがどうのこうの。
-    /// </summary>
     public class MafiaSound : IDisposable
     {
         /*
@@ -43,7 +40,6 @@ namespace Mafia
         public void Play(SecondaryBuffer buffer, Thing thing)
         {
             /*
-            // シュンスケ、nullかどうかチェックしなきゃならんとは何事だ
             if (device == null) return;
             if (numChannels == MAX_NUM_CHANNELS) return;
             channels[numChannels] = new GameSoundChannel(buffer.Clone(device), thing);
@@ -69,7 +65,6 @@ namespace Mafia
 
             ticks++;
 
-            // 再生し終わったBufferをあぼーんする。
             for (int i = 0; i < numChannels; i++)
             {
                 if (!channels[i].Buffer.Status.Playing)
