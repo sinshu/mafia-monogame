@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using Microsoft.Xna.Framework;
 
 namespace Mafia
@@ -67,8 +67,8 @@ namespace Mafia
         public void Draw(MafiaVideo video)
         {
             video.FillScreen(new Color(Color.Black, 0.5F));
-            video.DrawStringCenter("ÉXÉeÅ[ÉWÇÇ¶ÇÁÇÒÇ≈Ç≠ÇæÇ≥Ç¢", 1, -63, Color.Black);
-            video.DrawStringCenter("ÉXÉeÅ[ÉWÇÇ¶ÇÁÇÒÇ≈Ç≠ÇæÇ≥Ç¢", 0, -64, Color.White);
+            video.DrawStringCenter("„Çπ„ÉÜ„Éº„Ç∏„Çí„Åà„Çâ„Çì„Åß„Åè„Å†„Åï„ÅÑ", 1, -63, Color.Black);
+            video.DrawStringCenter("„Çπ„ÉÜ„Éº„Ç∏„Çí„Åà„Çâ„Çì„Åß„Åè„Å†„Åï„ÅÑ", 0, -64, Color.White);
             if (stageIndex != 0)
             {
                 video.Draw(176, 160, 8, 16, 0, 0, Mafia.SCREEN_WIDTH / 2 - 24, Mafia.SCREEN_HEIGHT / 2 - 8);

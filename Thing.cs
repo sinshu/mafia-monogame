@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 
 namespace Mafia
 {
     /// <summary>
-    /// �n�`�Ƃ̓����蔻���K�v�Ƃ����`���̂�\���B
+    /// 地形との当たり判定を必要とする矩形物体を表す。
     /// </summary>
     /// <remarks>
-    /// �ŋ߂̕����v�Z�G���W�����Đ_����ˁH
+    /// 最近の物理計算エンジンって神じゃね？
     /// </remarks>
     public abstract class Thing
     {

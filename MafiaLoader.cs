@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -57,7 +58,7 @@ namespace Mafia
         public Stage GetStage(string fileName)
         {
             using (Stream stream = GetFileStream(fileName))
-            using (StreamReader reader = new StreamReader(stream))
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
             {
                 string title = null;
                 int numRows = 0;

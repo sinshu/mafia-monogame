@@ -1,4 +1,4 @@
-
+Ôªø
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -93,307 +93,307 @@ namespace Mafia
                 int col = 5;
                 switch (s[i])
                 {
-                    case 'Ç†':
+                    case '„ÅÇ':
                         row = 0; col = 0; break;
-                    case 'Ç¢':
+                    case '„ÅÑ':
                         row = 0; col = 1; break;
-                    case 'Ç§':
+                    case '„ÅÜ':
                         row = 0; col = 2; break;
-                    case 'Ç¶':
+                    case '„Åà':
                         row = 0; col = 3; break;
-                    case 'Ç®':
+                    case '„Åä':
                         row = 0; col = 4; break;
-                    case 'Ç©':
+                    case '„Åã':
                         row = 1; col = 0; break;
-                    case 'Ç´':
+                    case '„Åç':
                         row = 1; col = 1; break;
-                    case 'Ç≠':
+                    case '„Åè':
                         row = 1; col = 2; break;
-                    case 'ÇØ':
+                    case '„Åë':
                         row = 1; col = 3; break;
-                    case 'Ç±':
+                    case '„Åì':
                         row = 1; col = 4; break;
-                    case 'Ç™':
+                    case '„Åå':
                         ten = true; row = 1; col = 0; break;
-                    case 'Ç¨':
+                    case '„Åé':
                         ten = true; row = 1; col = 1; break;
-                    case 'ÇÆ':
+                    case '„Åê':
                         ten = true; row = 1; col = 2; break;
-                    case 'Ç∞':
+                    case '„Åí':
                         ten = true; row = 1; col = 3; break;
-                    case 'Ç≤':
+                    case '„Åî':
                         ten = true; row = 1; col = 4; break;
-                    case 'Ç≥':
+                    case '„Åï':
                         row = 2; col = 0; break;
-                    case 'Çµ':
+                    case '„Åó':
                         row = 2; col = 1; break;
-                    case 'Ç∑':
+                    case '„Åô':
                         row = 2; col = 2; break;
-                    case 'Çπ':
+                    case '„Åõ':
                         row = 2; col = 3; break;
-                    case 'Çª':
+                    case '„Åù':
                         row = 2; col = 4; break;
-                    case 'Ç¥':
+                    case '„Åñ':
                         ten = true; row = 2; col = 0; break;
-                    case 'Ç∂':
+                    case '„Åò':
                         ten = true; row = 2; col = 1; break;
-                    case 'Ç∏':
+                    case '„Åö':
                         ten = true; row = 2; col = 2; break;
-                    case 'Ç∫':
+                    case '„Åú':
                         ten = true; row = 2; col = 3; break;
-                    case 'Çº':
+                    case '„Åû':
                         ten = true; row = 2; col = 4; break;
-                    case 'ÇΩ':
+                    case '„Åü':
                         row = 3; col = 0; break;
-                    case 'Çø':
+                    case '„Å°':
                         row = 3; col = 1; break;
-                    case 'Ç¬':
+                    case '„Å§':
                         row = 3; col = 2; break;
-                    case 'Ç¡':
+                    case '„Å£':
                         row = 11; col = 2; break;
-                    case 'Çƒ':
+                    case '„Å¶':
                         row = 3; col = 3; break;
-                    case 'Ç∆':
+                    case '„Å®':
                         row = 3; col = 4; break;
-                    case 'Çæ':
+                    case '„Å†':
                         ten = true; row = 3; col = 0; break;
-                    case 'Ç¿':
+                    case '„Å¢':
                         ten = true; row = 3; col = 1; break;
-                    case 'Ç√':
+                    case '„Å•':
                         ten = true; row = 3; col = 2; break;
-                    case 'Ç≈':
+                    case '„Åß':
                         ten = true; row = 3; col = 3; break;
-                    case 'Ç«':
+                    case '„Å©':
                         ten = true; row = 3; col = 4; break;
-                    case 'Ç»':
+                    case '„Å™':
                         row = 4; col = 0; break;
-                    case 'Ç…':
+                    case '„Å´':
                         row = 4; col = 1; break;
-                    case 'Ç ':
+                    case '„Å¨':
                         row = 4; col = 2; break;
-                    case 'ÇÀ':
+                    case '„Å≠':
                         row = 4; col = 3; break;
-                    case 'ÇÃ':
+                    case '„ÅÆ':
                         row = 4; col = 4; break;
-                    case 'ÇÕ':
+                    case '„ÅØ':
                         row = 5; col = 0; break;
-                    case 'Ç–':
+                    case '„Å≤':
                         row = 5; col = 1; break;
-                    case 'Ç”':
+                    case '„Åµ':
                         row = 5; col = 2; break;
-                    case 'Ç÷':
+                    case '„Å∏':
                         row = 5; col = 3; break;
-                    case 'ÇŸ':
+                    case '„Åª':
                         row = 5; col = 4; break;
-                    case 'ÇŒ':
+                    case '„Å∞':
                         ten = true; row = 5; col = 0; break;
-                    case 'Ç—':
+                    case '„Å≥':
                         ten = true; row = 5; col = 1; break;
-                    case 'Ç‘':
+                    case '„Å∂':
                         ten = true; row = 5; col = 2; break;
-                    case 'Ç◊':
+                    case '„Åπ':
                         ten = true; row = 5; col = 3; break;
-                    case 'Ç⁄':
+                    case '„Åº':
                         ten = true; row = 5; col = 4; break;
-                    case 'Çœ':
+                    case '„Å±':
                         maru = true; row = 5; col = 0; break;
-                    case 'Ç“':
+                    case '„Å¥':
                         maru = true; row = 5; col = 1; break;
-                    case 'Ç’':
+                    case '„Å∑':
                         maru = true; row = 5; col = 2; break;
-                    case 'Çÿ':
+                    case '„Å∫':
                         maru = true; row = 5; col = 3; break;
-                    case 'Ç€':
+                    case '„ÅΩ':
                         maru = true; row = 5; col = 4; break;
-                    case 'Ç‹':
+                    case '„Åæ':
                         row = 6; col = 0; break;
-                    case 'Ç›':
+                    case '„Åø':
                         row = 6; col = 1; break;
-                    case 'Çﬁ':
+                    case '„ÇÄ':
                         row = 6; col = 2; break;
-                    case 'Çﬂ':
+                    case '„ÇÅ':
                         row = 6; col = 3; break;
-                    case 'Ç‡':
+                    case '„ÇÇ':
                         row = 6; col = 4; break;
-                    case 'Ç‚':
+                    case '„ÇÑ':
                         row = 7; col = 0; break;
-                    case 'Ç‰':
+                    case '„ÇÜ':
                         row = 7; col = 2; break;
-                    case 'ÇÊ':
+                    case '„Çà':
                         row = 7; col = 4; break;
-                    case 'Ç·':
+                    case '„ÇÉ':
                         row = 12; col = 0; break;
-                    case 'Ç„':
+                    case '„ÇÖ':
                         row = 12; col = 2; break;
-                    case 'ÇÂ':
+                    case '„Çá':
                         row = 12; col = 4; break;
-                    case 'ÇÁ':
+                    case '„Çâ':
                         row = 8; col = 0; break;
-                    case 'ÇË':
+                    case '„Çä':
                         row = 8; col = 1; break;
-                    case 'ÇÈ':
+                    case '„Çã':
                         row = 8; col = 2; break;
-                    case 'ÇÍ':
+                    case '„Çå':
                         row = 8; col = 3; break;
-                    case 'ÇÎ':
+                    case '„Çç':
                         row = 8; col = 4; break;
-                    case 'ÇÌ':
+                    case '„Çè':
                         row = 9; col = 0; break;
-                    case 'Ç':
+                    case '„Çí':
                         row = 9; col = 4; break;
-                    case 'ÇÒ':
+                    case '„Çì':
                         row = 10; col = 0; break;
-                    case 'ÉA':
+                    case '„Ç¢':
                         katakana = true; row = 0; col = 0; break;
-                    case 'ÉC':
+                    case '„Ç§':
                         katakana = true; row = 0; col = 1; break;
-                    case 'ÉE':
+                    case '„Ç¶':
                         katakana = true; row = 0; col = 2; break;
-                    case 'ÉG':
+                    case '„Ç®':
                         katakana = true; row = 0; col = 3; break;
-                    case 'ÉI':
+                    case '„Ç™':
                         katakana = true; row = 0; col = 4; break;
-                    case 'ÉJ':
+                    case '„Ç´':
                         katakana = true; row = 1; col = 0; break;
-                    case 'ÉL':
+                    case '„Ç≠':
                         katakana = true; row = 1; col = 1; break;
-                    case 'ÉN':
+                    case '„ÇØ':
                         katakana = true; row = 1; col = 2; break;
-                    case 'ÉP':
+                    case '„Ç±':
                         katakana = true; row = 1; col = 3; break;
-                    case 'ÉR':
+                    case '„Ç≥':
                         katakana = true; row = 1; col = 4; break;
-                    case 'ÉK':
+                    case '„Ç¨':
                         katakana = true; ten = true; row = 1; col = 0; break;
-                    case 'ÉM':
+                    case '„ÇÆ':
                         katakana = true; ten = true; row = 1; col = 1; break;
-                    case 'ÉO':
+                    case '„Ç∞':
                         katakana = true; ten = true; row = 1; col = 2; break;
-                    case 'ÉQ':
+                    case '„Ç≤':
                         katakana = true; ten = true; row = 1; col = 3; break;
-                    case 'ÉS':
+                    case '„Ç¥':
                         katakana = true; ten = true; row = 1; col = 4; break;
-                    case 'ÉT':
+                    case '„Çµ':
                         katakana = true; row = 2; col = 0; break;
-                    case 'ÉV':
+                    case '„Ç∑':
                         katakana = true; row = 2; col = 1; break;
-                    case 'ÉX':
+                    case '„Çπ':
                         katakana = true; row = 2; col = 2; break;
-                    case 'ÉZ':
+                    case '„Çª':
                         katakana = true; row = 2; col = 3; break;
-                    case 'É\':
+                    case '„ÇΩ':
                         katakana = true; row = 2; col = 4; break;
-                    case 'ÉU':
+                    case '„Ç∂':
                         katakana = true; ten = true; row = 2; col = 0; break;
-                    case 'ÉW':
+                    case '„Ç∏':
                         katakana = true; ten = true; row = 2; col = 1; break;
-                    case 'ÉY':
+                    case '„Ç∫':
                         katakana = true; ten = true; row = 2; col = 2; break;
-                    case 'É[':
+                    case '„Çº':
                         katakana = true; ten = true; row = 2; col = 3; break;
-                    case 'É]':
+                    case '„Çæ':
                         katakana = true; ten = true; row = 2; col = 4; break;
-                    case 'É^':
+                    case '„Çø':
                         katakana = true; row = 3; col = 0; break;
-                    case 'É`':
+                    case '„ÉÅ':
                         katakana = true; row = 3; col = 1; break;
-                    case 'Éc':
+                    case '„ÉÑ':
                         katakana = true; row = 3; col = 2; break;
-                    case 'Éb':
+                    case '„ÉÉ':
                         katakana = true; row = 11; col = 2; break;
-                    case 'Ée':
+                    case '„ÉÜ':
                         katakana = true; row = 3; col = 3; break;
-                    case 'Ég':
+                    case '„Éà':
                         katakana = true; row = 3; col = 4; break;
-                    case 'É_':
+                    case '„ÉÄ':
                         katakana = true; ten = true; row = 3; col = 0; break;
-                    case 'Éa':
+                    case '„ÉÇ':
                         katakana = true; ten = true; row = 3; col = 1; break;
-                    case 'Éd':
+                    case '„ÉÖ':
                         katakana = true; ten = true; row = 3; col = 2; break;
-                    case 'Éf':
+                    case '„Éá':
                         katakana = true; ten = true; row = 3; col = 3; break;
-                    case 'Éh':
+                    case '„Éâ':
                         katakana = true; ten = true; row = 3; col = 4; break;
-                    case 'Éi':
+                    case '„Éä':
                         katakana = true; row = 4; col = 0; break;
-                    case 'Éj':
+                    case '„Éã':
                         katakana = true; row = 4; col = 1; break;
-                    case 'Ék':
+                    case '„Éå':
                         katakana = true; row = 4; col = 2; break;
-                    case 'Él':
+                    case '„Éç':
                         katakana = true; row = 4; col = 3; break;
-                    case 'Ém':
+                    case '„Éé':
                         katakana = true; row = 4; col = 4; break;
-                    case 'Én':
+                    case '„Éè':
                         katakana = true; row = 5; col = 0; break;
-                    case 'Éq':
+                    case '„Éí':
                         katakana = true; row = 5; col = 1; break;
-                    case 'Ét':
+                    case '„Éï':
                         katakana = true; row = 5; col = 2; break;
-                    case 'Éw':
+                    case '„Éò':
                         katakana = true; row = 5; col = 3; break;
-                    case 'Éz':
+                    case '„Éõ':
                         katakana = true; row = 5; col = 4; break;
-                    case 'Éo':
+                    case '„Éê':
                         katakana = true; ten = true; row = 5; col = 0; break;
-                    case 'Ér':
+                    case '„Éì':
                         katakana = true; ten = true; row = 5; col = 1; break;
-                    case 'Éu':
+                    case '„Éñ':
                         katakana = true; ten = true; row = 5; col = 2; break;
-                    case 'Éx':
+                    case '„Éô':
                         katakana = true; ten = true; row = 5; col = 3; break;
-                    case 'É{':
+                    case '„Éú':
                         katakana = true; ten = true; row = 5; col = 4; break;
-                    case 'Ép':
+                    case '„Éë':
                         katakana = true; maru = true; row = 5; col = 0; break;
-                    case 'És':
+                    case '„Éî':
                         katakana = true; maru = true; row = 5; col = 1; break;
-                    case 'Év':
+                    case '„Éó':
                         katakana = true; maru = true; row = 5; col = 2; break;
-                    case 'Éy':
+                    case '„Éö':
                         katakana = true; maru = true; row = 5; col = 3; break;
-                    case 'É|':
+                    case '„Éù':
                         katakana = true; maru = true; row = 5; col = 4; break;
-                    case 'É}':
+                    case '„Éû':
                         katakana = true; row = 6; col = 0; break;
-                    case 'É~':
+                    case '„Éü':
                         katakana = true; row = 6; col = 1; break;
-                    case 'ÉÄ':
+                    case '„É†':
                         katakana = true; row = 6; col = 2; break;
-                    case 'ÉÅ':
+                    case '„É°':
                         katakana = true; row = 6; col = 3; break;
-                    case 'ÉÇ':
+                    case '„É¢':
                         katakana = true; row = 6; col = 4; break;
-                    case 'ÉÑ':
+                    case '„É§':
                         katakana = true; row = 7; col = 0; break;
-                    case 'ÉÜ':
+                    case '„É¶':
                         katakana = true; row = 7; col = 2; break;
-                    case 'Éà':
+                    case '„É®':
                         katakana = true; row = 7; col = 4; break;
-                    case 'ÉÉ':
+                    case '„É£':
                         katakana = true; row = 12; col = 0; break;
-                    case 'ÉÖ':
+                    case '„É•':
                         katakana = true; row = 12; col = 2; break;
-                    case 'Éá':
+                    case '„Éß':
                         katakana = true; row = 12; col = 4; break;
-                    case 'Éâ':
+                    case '„É©':
                         katakana = true; row = 8; col = 0; break;
-                    case 'Éä':
+                    case '„É™':
                         katakana = true; row = 8; col = 1; break;
-                    case 'Éã':
+                    case '„É´':
                         katakana = true; row = 8; col = 2; break;
-                    case 'Éå':
+                    case '„É¨':
                         katakana = true; row = 8; col = 3; break;
-                    case 'Éç':
+                    case '„É≠':
                         katakana = true; row = 8; col = 4; break;
-                    case 'Éè':
+                    case '„ÉØ':
                         katakana = true; row = 9; col = 0; break;
-                    case 'Éí':
+                    case '„É≤':
                         katakana = true; row = 9; col = 4; break;
-                    case 'Éì':
+                    case '„É≥':
                         katakana = true; row = 10; col = 0; break;
-                    case 'Å[':
+                    case '„Éº':
                         row = 10; col = 2; break;
                 }
                 if (ten)

@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 
 namespace Mafia
 {
     /// <summary>
-    /// è��è��è��
+    /// ﾃｨｳﾝﾃｨｳﾝﾃｨｳﾝ
     /// </summary>
     public class Tiun : Thing
     {

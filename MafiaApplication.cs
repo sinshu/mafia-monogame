@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -40,8 +40,11 @@ namespace Mafia
 
         protected override void Initialize()
         {
-            graphics.PreferredBackBufferWidth = 2 * 640;
-            graphics.PreferredBackBufferHeight = 2 * 480;
+            var display = graphics.GraphicsDevice.DisplayMode;
+
+            graphics.PreferredBackBufferWidth = display.Width;
+            graphics.PreferredBackBufferHeight = display.Height;
+            graphics.IsFullScreen = true;
             graphics.ApplyChanges();
 
             base.Initialize();

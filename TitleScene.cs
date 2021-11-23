@@ -1,10 +1,10 @@
-using System;
+ï»¿using System;
 using Microsoft.Xna.Framework;
 
 namespace Mafia
 {
     /// <summary>
-    /// ƒ^ƒCƒgƒ‹‰æ–ÊB
+    /// ã‚¿ã‚¤ãƒˆãƒ«ç”»é¢ã€‚
     /// </summary>
     public class TitleScene
     {

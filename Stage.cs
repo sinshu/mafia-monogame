@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 
 namespace Mafia
 {
@@ -102,7 +102,7 @@ namespace Mafia
                     }
                     catch
                     {
-                        throw new Exception(fileName + " ÇÃ " + (row + 4) + " çs " + (col + 1) + " óÒÇÃï”ÇËÇ™Ç®Ç©ÇµÇ¢Ç≈Ç∑ÅÑÅÉ");
+                        throw new Exception("Failed to parse: " + fileName + ", row " + (row + 4) + ", col " + (col + 1));
                     }
                 }
             }

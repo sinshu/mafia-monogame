@@ -1,9 +1,9 @@
-using System;
+ï»¿using System;
 
 namespace Mafia
 {
     /// <summary>
-    /// ƒ^ƒCƒgƒ‹‰æ–Ê‚Ì‘€ìB
+    /// ã‚¿ã‚¤ãƒˆãƒ«ç”»é¢æ™‚ã®æ“ä½œã€‚
     /// </summary>
     public struct TitleInput
     {

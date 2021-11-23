@@ -1,9 +1,9 @@
-using System;
+ï»¿using System;
 
 namespace Mafia
 {
     /// <summary>
-    /// 2ŸŒ³‚ÌƒxƒNƒgƒ‹‚ğ•\‚·B
+    /// 2æ¬¡å…ƒã®ãƒ™ã‚¯ãƒˆãƒ«ã‚’è¡¨ã™ã€‚
     /// </summary>
     public struct Vector
     {
