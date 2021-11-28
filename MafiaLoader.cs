@@ -34,11 +34,6 @@ namespace Mafia
 
         public FileStream GetFileStream(string fileName)
         {
-            if (fileName.IndexOf(':') != -1)
-            {
-                return new FileStream(fileName, FileMode.Open);
-            }
-
             var path = Path.Combine(GetExeDirectory(), resourceName, fileName);
             return new FileStream(path, FileMode.Open);
         }
@@ -53,6 +48,12 @@ namespace Mafia
         {
             var path = Path.Combine(GetExeDirectory(), resourceName, fileName);
             return SoundEffect.FromStream(GetFileStream(path));
+        }
+
+        public XNAMP3 GetMusic(string fileName)
+        {
+            var path = Path.Combine(GetExeDirectory(), resourceName, fileName);
+            return new XNAMP3(path);
         }
 
         public Stage GetStage(string fileName)

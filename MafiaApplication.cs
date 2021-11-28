@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Mafia
 {
@@ -17,7 +18,7 @@ namespace Mafia
         private MafiaVideo video;
         private MafiaSound sound;
         private MafiaInput input;
-        //private Audio bgm = null;
+        private XNAMP3 music;
 
         private TitleScene title;
         private SelectScene select;
@@ -81,6 +82,7 @@ namespace Mafia
             video = new MafiaVideo(this);
             sound = new MafiaSound(this);
             input = new MafiaInput(this);
+            music = MafiaLoader.DefaultLoader.GetMusic("mafia.mp3");
 
             base.LoadContent();
         }
@@ -114,10 +116,10 @@ namespace Mafia
             {
                 case TITLE_SCENE:
                     {
-                        //if (bgm != null && bgm.Playing)
-                        //{
-                        //    bgm.Stop();
-                        //}
+                        if (music.State == SoundState.Playing)
+                        {
+                            music.Stop();
+                        }
                         switch (title.Tick(input.GetCurrentTitleInput()))
                         {
                             case TitleScene.NONE:
@@ -159,10 +161,10 @@ namespace Mafia
                     break;
 
                 case GAME_SCENE:
-                    //if (bgm != null && !bgm.Playing)
-                    //{
-                    //    bgm.Play();
-                    //}
+                    if (music.State != SoundState.Playing)
+                    {
+                        music.Play();
+                    }
                     {
                         switch (game.Tick(input.GetCurrentGameInput()))
                         {

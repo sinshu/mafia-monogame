@@ -32,7 +32,7 @@ namespace Mafia
                 null,
                 null,
                 null,
-                Matrix.Identity);
+                null);
         }
 
         public void End()
@@ -47,7 +47,7 @@ namespace Mafia
                 null,
                 null,
                 null,
-                Matrix.Identity);
+                null);
 
             var windowWidth = app.GraphicsDevice.PresentationParameters.BackBufferWidth;
             var windowHeight = app.GraphicsDevice.PresentationParameters.BackBufferHeight;
