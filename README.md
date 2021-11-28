@@ -1,4 +1,4 @@
-# Mafia
+# Mafia runs on MonoGame
 
 This is a MonoGame port of "Mafia", an old platform game originally made on Managed DirectX.
 
