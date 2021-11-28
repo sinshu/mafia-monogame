@@ -5,7 +5,7 @@ namespace Mafia
     public static class Mafia
     {
         public const string TITLE = "Mafia";
-        public const string RESOURCE_NAME = "mafia";
+        public const string RESOURCE_NAME = "gamedata";
         public const int SCREEN_WIDTH = 320;
         public const int SCREEN_HEIGHT = 240;
         public const int BLOCK_WIDTH = 16;

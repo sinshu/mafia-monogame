@@ -10,99 +10,99 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="mafia\" />
+    <Folder Include="gamedata\" />
     <Folder Include="mp3\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="mafia\boxfall.wav">
+    <None Update="gamedata\boxfall.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\boxmove.wav">
+    <None Update="gamedata\boxmove.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\coin.wav">
+    <None Update="gamedata\coin.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\fall.wav">
+    <None Update="gamedata\fall.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\hyakuyen.wav">
+    <None Update="gamedata\hyakuyen.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\jump.wav">
+    <None Update="gamedata\jump.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\lift.wav">
+    <None Update="gamedata\lift.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\mafia.ico">
+    <None Update="gamedata\mafia.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\mafia.mp3">
+    <None Update="gamedata\mafia.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\mafia.png">
+    <None Update="gamedata\mafia.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\spring.wav">
+    <None Update="gamedata\spring.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage0.stg">
+    <None Update="gamedata\stage0.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage1.stg">
+    <None Update="gamedata\stage1.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage10.stg">
+    <None Update="gamedata\stage10.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage11.stg">
+    <None Update="gamedata\stage11.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage12.stg">
+    <None Update="gamedata\stage12.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage13.stg">
+    <None Update="gamedata\stage13.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage14.stg">
+    <None Update="gamedata\stage14.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage2.stg">
+    <None Update="gamedata\stage2.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage3.stg">
+    <None Update="gamedata\stage3.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage4.stg">
+    <None Update="gamedata\stage4.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage5.stg">
+    <None Update="gamedata\stage5.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage6.stg">
+    <None Update="gamedata\stage6.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage7.stg">
+    <None Update="gamedata\stage7.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage8.stg">
+    <None Update="gamedata\stage8.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stage9.stg">
+    <None Update="gamedata\stage9.stg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\stiana.wav">
+    <None Update="gamedata\stiana.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\switch.wav">
+    <None Update="gamedata\switch.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\tiun.wav">
+    <None Update="gamedata\tiun.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="mafia\ue.wav">
+    <None Update="gamedata\ue.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
